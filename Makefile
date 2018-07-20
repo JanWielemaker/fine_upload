@@ -7,7 +7,9 @@ FILES=	web/css/fine-uploader-new.css \
 DIRS=	web/css web/js web/icons/placeholders
 SRC=	node_modules/fine-uploader/fine-uploader
 
-all: $(FILES)
+all::
+
+src: $(FILES)
 
 web/css/%: $(SRC)/% $(DIRS)
 	cp -p $< $@
@@ -19,5 +21,8 @@ web/icons/%: $(SRC)/% $(DIRS)
 $(DIRS):
 	mkdir -p $@
 
+check::
+
+clean::
 distclean:
 	rm -f $(FILES)
