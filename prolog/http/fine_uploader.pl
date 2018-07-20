@@ -45,7 +45,7 @@
 :- use_module(library(debug)).
 :- use_module(library(broadcast)).
 
-:- debug(upload).
+% :- debug(upload).
 
 /** <module> Fine uploader HTTP backend
 
