@@ -21,6 +21,7 @@ web/icons/%: $(SRC)/% $(DIRS)
 $(DIRS):
 	mkdir -p $@
 
+install::
 check::
 
 clean::
