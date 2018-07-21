@@ -213,7 +213,8 @@ upload_file(UUID, Ext, Dir, Path) :-
 %   known to the client, so this should be safe.
 
 fine_upload_delete(Request) :-
-    option(path_info(UUID), Request),
+    option(path_info(PathInfo), Request),
+    split_string(PathInfo, "/", "/", [UUID]),
     upload_file(UUID, _Ext, _Dir, Path),
     delete_file(Path),
     reply_json_dict(json{success: true}).
