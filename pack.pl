@@ -1,6 +1,6 @@
 name(fine_upload).
 title('HTTP support for file uploading').
-version('0.1.4').
+version('0.1.5').
 keywords([http, html, browser, file, upload]).
 author('Jan Wielemaker', 'J.Wielemaker@vu.nl').
 packager( 'Jan Wielemaker', 'J.Wielemaker@vu.nl' ).
