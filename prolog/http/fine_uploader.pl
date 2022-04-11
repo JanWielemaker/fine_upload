@@ -146,7 +146,7 @@ save_file(Request, Parts0, In, file(FileName, Path), Options) :-
     debug(upload, 'IsMulti = ~p, Offset = ~p', [IsMulti, Offset]),
     make_directory_path(Dir),
     setup_call_cleanup(
-        open(Path, write, Out,
+        open(Path, update, Out,
              [ type(binary)
              ]),
         (   seek(Out, Offset, bof, NewOffset),
